@@ -3,9 +3,9 @@
 # ############################################################################
 # Copyright  : (C) 2014 by MHComm. All rights reserved
 #
-# Name       : log_config.config
+# Name       : log_config.mh_linphone.py
 """
-  Summary    :  helper for setting up logging
+  Summary    :  default log configuration for this project
 
  ****************************************************************************
  * This program is free software; you can redistribute it and/or
@@ -24,8 +24,6 @@
  *
  ****************************************************************************
 
-helper module to setup logging
-
 """
 # #############################################################################
 from __future__ import absolute_import
@@ -39,56 +37,58 @@ __email__     = "info@mhcomm.fr"
 #   Imports
 # -----------------------------------------------------------------------------
 import os
-import importlib
-try:
-    from logging.config import dictConfig
-except ImportError:
-    from dictconfig import dictConfig
-
-import __main__ # required to get name of executable
 
 # -----------------------------------------------------------------------------
 #   Globals
 # -----------------------------------------------------------------------------
 
-def setup_logging(log_config=None, log_dir='', try_dflt=True):
-    """ sets up logging. falls back to default logging if config for
-        the current program doesn't exist
-    """
-    program_name = os.path.splitext(os.path.basename(__main__.__file__))[0]
-    if log_config:
-        module_name = "log_config." + log_config
-    else:
-        program_name = os.path.splitext(os.path.basename(__main__.__file__))[0]
-        module_name = "log_config." + program_name
-          
-    #print("LOG_CONF %r" % module_name)
-    global exc
-    try:
-        mod = importlib.import_module(module_name)
-    except ImportError as _exc:
-        exc = _exc
-        #print("ERR: %r" % _exc.args[0])
-        missing_error = 'No module named ' + module_name.split('.')[-1]
-        #print("MIS: %r" % missing_error)
-        if not _exc.args[0] == missing_error:
-            raise
-        if try_dflt:
-            #print("WARNING %s. will try sample log settings" % _exc)
-            setup_logging(log_config+"_default", try_dflt=False) # try sample
-            return
-        if log_config.split('_')[0] != 'default':
-            #print("WARNING %s. will try default log settings" % _exc)
-            setup_logging('default') # otherwise default config then
-            return
-        raise
-    if hasattr(mod, 'log_settings'):
-        log_settings = mod.log_settings
-    else:
-        log_settings = mod.get_log_settings(basedir=log_dir, basename=program_name + '.log')
-
-    #print("set up log:\n", log_settings)
-    dictConfig(log_settings)
+def get_log_settings(basedir='', basename='log'):
+    """ returns a log configuration dict """
+    logfile = os.path.join(basedir, basename)
+    log_settings = {
+        'version': 1,
+        'disable_existing_loggers': True,
+        'formatters': {
+            'verbose': {
+                'format': '%(asctime)s %(levelname)-8s %(name)s %(message)s'
+            },
+            'simple': {
+                'format': '%(levelname)s %(module)s %(message)s'
+            },
+        },
+        'handlers': {
+            'console': {
+                'level':'DEBUG',
+                'class':'logging.StreamHandler',
+                'formatter': 'verbose'
+            },
+            'file': {
+                'level':'DEBUG',
+                'class':'logging.FileHandler',
+                'formatter': 'verbose',
+                'filename' : logfile
+            }
+        },
+        'loggers': {
+            # root loggers
+            '': {
+                'level': 'DEBUG',
+                'handlers': ['console', 'file'],
+                'propagate': True,
+            },
+        'linphone': {
+                'level': 'DEBUG',
+                'handlers': ['file'],
+                'propagate': False,
+            },
+#             'wrappers.bd_linphone_wrapper': {
+#                 'level': 'WARNING',
+#                 'handlers': ['console', 'file'],
+#                 'propagate': True,
+#             },
+        }
+    }
+    return log_settings
 
 # -----------------------------------------------------------------------------
 #   End of file

@@ -3,9 +3,9 @@
 # ############################################################################
 # Copyright  : (C) 2014 by MHComm. All rights reserved
 #
-# Name       : mhlp_force_imports
+# Name       : log_config.default.py
 """
-  Summary    :  for py2exe forces imports of all required modules
+  Summary    :  default log configuration for this project
 
  ****************************************************************************
  * This program is free software; you can redistribute it and/or
@@ -24,8 +24,6 @@
  *
  ****************************************************************************
 
- all force imports for mh_linphone
-
 """
 # #############################################################################
 from __future__ import absolute_import
@@ -38,14 +36,50 @@ __email__     = "info@mhcomm.fr"
 # -----------------------------------------------------------------------------
 #   Imports
 # -----------------------------------------------------------------------------
-#pylint: disable=W0611
-import mhlinphone_wrapper
-import lp_rpc_server
-import lp_config 
-import lpqt.widgets.video_window
-import log_config.default_default
-import log_config.mh_linphone_default
+import os
 
 # -----------------------------------------------------------------------------
 #   Globals
+# -----------------------------------------------------------------------------
+
+def get_log_settings(basedir='', basename='log'):
+    """ returns a log configuration dict """
+    logfile = os.path.join(basedir, basename)
+    log_settings = {
+        'version': 1,
+        'disable_existing_loggers': True,
+        'formatters': {
+            'verbose': {
+                'format': '%(levelname)-8s %(asctime)s %(name)s %(message)s'
+            },
+            'simple': {
+                'format': '%(levelname)s %(module)s %(message)s'
+            },
+        },
+        'handlers': {
+            'console': {
+                'level':'WARNING',
+                'class':'logging.StreamHandler',
+                'formatter': 'verbose'
+            },
+            'file': {
+                'level':'INFO',
+                'class':'logging.FileHandler',
+                'formatter': 'verbose',
+                'filename' : logfile
+            }
+        },
+        'loggers': {
+            # root loggers
+            '': {
+                'level': 'INFO',
+                'handlers': ['console'],
+                'propagate': True,
+            },
+        }
+    }
+    return log_settings
+
+# -----------------------------------------------------------------------------
+#   End of file
 # -----------------------------------------------------------------------------

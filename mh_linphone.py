@@ -104,7 +104,6 @@ def show(widget, do_show=True):
         widget.show()
     else:
         widget.hide()
-    else:
 
 
 def quit_app(widget):
@@ -140,13 +139,15 @@ def main():
     from lpqt.widgets.video_window import set_locale, WIN_TITLE
     from lpqt.widgets.video_window import MHVideoWindow
 
+    rc_config_file=os.path.join(os.path.dirname(config.filename),
+                        "tmp.rc")
+
+    if os.path.exists(rc_config_file):
+        os.unlink(rc_config_file)
 
     linphone = mhlinphone_wrapper.MHLinphoneWrapper(
         config=config,
-        # rc_config_file=os.path.join(LPConfig.get_default_lp_data_dir(),
-        #                     "samples",
-        #                     "dev")
-    )
+        rc_config_file=rc_config_file)
 
     #Get options
     css_path = options.css_file

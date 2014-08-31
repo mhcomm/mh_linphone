@@ -73,7 +73,8 @@ class SqliteDB(object):
     def __init__(self, fname):
         cls = self.__class__
         if cls.cnt:
-            raise SqliteWrapError("There can only be one (%s db)" % fname)
+            logger.warning("There can only be one (%s db)" % fname)
+            # raise SqliteWrapError("There can only be one (%s db)" % fname)
         cls.cnt += 1
         self.lock = threading.RLock()
         self.fname = fname
