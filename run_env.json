@@ -1,0 +1,6 @@
+{ 
+ "BASEDIR" : ".",
+ "VERSION" : "1.0",
+ "PYSCORE_PATH" : ["%PYSCORELIB_TOOLS%"],
+ "PYTHONPATH" : [ ".", "pylib", "bin"  ]
+}

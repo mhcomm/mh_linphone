@@ -1,0 +1,13 @@
+<RCC>
+<qresource>
+<file>../pylib/lppixmaps/buttons/button_red.png</file>
+<file>../pylib/lppixmaps/buttons/button_disabled.png</file>
+<file>../pylib/lppixmaps/backgrounds/separation.png</file>
+<file>../pylib/lppixmaps/backgrounds/widget.png</file>
+<file>../pylib/lppixmaps/buttons/button_combobox.png</file>
+<file>../pylib/lppixmaps/backgrounds/buttonbar.png</file>
+<file>../pylib/lppixmaps/buttons/combo_down_arrow.png</file>
+<file>../pylib/lppixmaps/buttons/button_pressed.png</file>
+<file>../pylib/lppixmaps/buttons/button_enabled.png</file>
+</qresource>
+</RCC>

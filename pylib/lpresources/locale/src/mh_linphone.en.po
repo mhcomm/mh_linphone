@@ -1,0 +1,79 @@
+# English translations for PACKAGE package.
+# Copyright (C) 2010 ORGANIZATION
+# r26375 <klaus.foerster@mhcomm.fr>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-08-22 15:53+Paris, Madrid (heure dt)\n"
+"PO-Revision-Date: 2010-08-11 14:38+0200\n"
+"Last-Translator: r26375 <klaus.foerster@mhcomm.fr>\n"
+"Language-Team: English\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "VISIO_3G"
+msgstr "3G"
+
+msgid "VISIO_Contacts"
+msgstr "Contacts"
+
+msgid "VISIO_Fluide+"
+msgstr "Fluidity+"
+
+msgid "VISIO_MakeCall"
+msgstr "Make call"
+
+msgid "VISIO_MakingCall"
+msgstr ""
+"Making"
+"call..."
+
+msgid "VISIO_Photo"
+msgstr "Take Photo"
+
+msgid "VISIO_Qualite+"
+msgstr "Quality+"
+
+msgid "VISIO_SwitchCamera"
+msgstr "Swich camera"
+
+msgid "VISIO_btn_No"
+msgstr "No"
+
+msgid "VISIO_btn_Ok"
+msgstr "OK"
+
+msgid "VISIO_btn_Yes"
+msgstr "Yes"
+
+msgid "VISIO_dlg_AcceptIncomingCall?"
+msgstr "Accept incoming call?"
+
+msgid "VISIO_dlg_CallWasEnded."
+msgstr "Call was ended."
+
+msgid "VISIO_dlg_Cancel"
+msgstr "Close."
+
+msgid "VISIO_dlg_DoYouReallyWantToCloseVideoWindow?"
+msgstr "Do you really want to close the window?"
+
+msgid "VISIO_dlg_ErrorInConnection."
+msgstr "Error in connection. Please try later."
+
+msgid "VISIO_dlg_MissingWebcam."
+msgstr "Camera doesn't seem to be connected properly."
+
+msgid "VISIO_dlg_SnapshotInProgress"
+msgstr "Taking Photo..."
+
+msgid "VISIO_dlg_SnapshotTaken_ConsultPortal."
+msgstr "Photo is available on portal."
+
+msgid "VISIO_hangup"
+msgstr "Hang up"

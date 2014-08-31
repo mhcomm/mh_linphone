@@ -1,0 +1,5 @@
+EXCLUDE_DIRS=src_templates
+EXCLUDE_FILES=mhlinphonewrapper.py, __init__.py,  mh_linphone_pixmaps_rc.py
+EXCLUDE_WINDOWS=
+EXCLUDE_LINUX=
+EXCLUDE_MAC=

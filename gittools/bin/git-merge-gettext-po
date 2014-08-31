@@ -1,0 +1,22 @@
+#!/bin/sh
+# Helper script for simplifying merges of gettext-po files
+# found at http://www.no-ack.org/2010/12/writing-git-merge-driver-for-po-files.html
+#
+#
+# To use this script add following entry to .git/config:
+#[merge "merge-gettext-po"]
+#     name = merge driver for gettext po files
+#     driver = <your_path_to_your_repository>/gittools/bin/git-merge-gettext-po %O %A %B
+#
+# further add add a file named '.gitattributes' to the directories
+# where your .po files are located.
+#
+# File contents:
+# *.po merge=merge-gettext-po
+#
+REGX='^"POT-Creation-Date:.*'
+REPL=`grep "$REGX" "$3" | sed -e 's/\\\\/\\\\\\\\/'`
+ 
+sed -i -e "s/$REGX/$REPL/" "$2"
+ 
+git merge-file -L "" -L "" -L "" "$2" "$1" "$3"

@@ -1,0 +1,4 @@
+[submodule "gittools/shared"]
+	path = gittools/shared
+	url = mhde:gitsrc/mh_gittools
+    update = none

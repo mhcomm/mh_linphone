@@ -1,0 +1,16 @@
+#!/bin/bash
+
+bd=`cd $(dirname $0) ; pwd`
+topdir=`cd "$bd/.." ; pwd`
+
+echo Initializing git sub modules for $bd
+
+cd $topdir
+git submodule init
+git submodule update
+
+"$bd/inithooks.sh"
+
+
+
+

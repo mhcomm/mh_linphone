@@ -1,0 +1,57 @@
+{
+    "type": "lp_config",
+    "version": "1.0",
+    "data":{
+        "test.address": "10.8.0.10",
+        "test.port": 8000,
+        "test.remote_sip_addr": "sip:other_t@192.168.42.67",
+
+        "http.url": "https://cssp.lan/filestore",
+        "https.cert":null,
+        "https.key":null,
+        "https.ssl_verify": false,
+
+        "video.webcam": "Logitech HD Pro Webcam C920",
+        "audio.micro": null,
+        "audio.speaker": null,
+
+        "sound.ring": "resources/sounds/oldphone.wav",
+        "sound.ringback": "resources/sounds/ringback.wav",
+
+        "bandwidth.upload": 500,
+        "bandwidth.download": 500,
+
+        "mh_lp.tmp_dir": "tmp",
+        "mh_lp.log_dir": "log",
+
+        "mh_lp.local_sip_addr": "sip:toto@192.168.42.67",
+
+        "proxy.enabled": false,
+        "proxy.address": "192.168.42.67",
+        "proxy.login": "toto",
+        "proxy.password": "toto",
+
+        "profile1.name": "quality",
+        "profile1.framerate": 5,
+        "profile1.video_size": "4cif",
+        "profile1.video_jitt_comp": 500,
+        "profile1.audio_jitt_comp": 500,
+        "profile1.aec_enabled": true,
+
+        "profile2.name": "fluid",
+        "profile2.framerate": 30,
+        "profile2.video_size": "cif",
+        "profile2.video_jitt_comp": 500,
+        "profile2.audio_jitt_comp": 500,
+        "profile2.aec_enabled": true,
+
+        "profile3.name": "3g",
+        "profile3.framerate": 15,
+        "profile3.video_size": "cif",
+        "profile3.video_jitt_comp": 500,
+        "profile3.audio_jitt_comp": 500,
+        "profile3.aec_enabled": true,
+
+        "contacts.filename": "contacts.json"
+    }
+}

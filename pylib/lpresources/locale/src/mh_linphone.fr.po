@@ -1,0 +1,91 @@
+# -*- coding: utf-8 -*-
+# French translations for PACKAGE package
+# Traduction francaise du package PACKAGE.
+# Copyright (C) 2010 ORGANIZATION
+# klausf <klaus.foerster@mhcomm.fr>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-08-22 15:53+Paris, Madrid (heure dt)\n"
+"PO-Revision-Date: 2010-08-10 17:51+0200\n"
+"Last-Translator: klausf <klaus.foerster@mhcomm.fr>\n"
+"Language-Team: French\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "VISIO_3G"
+msgstr "3G"
+
+msgid "VISIO_Contacts"
+msgstr "Annuaire"
+
+msgid "VISIO_Fluide+"
+msgstr ""
+"Priorité\n"
+"mouvement"
+
+msgid "VISIO_MakeCall"
+msgstr "Appeler"
+
+msgid "VISIO_MakingCall"
+msgstr ""
+"Appel\n"
+"en cours"
+
+msgid "VISIO_Photo"
+msgstr ""
+"Prendre\n"
+"photo"
+
+msgid "VISIO_Qualite+"
+msgstr ""
+"Priorité\n"
+"Qualité"
+
+msgid "VISIO_SwitchCamera"
+msgstr ""
+"Changer\n"
+"caméra"
+
+msgid "VISIO_btn_No"
+msgstr "Non"
+
+msgid "VISIO_btn_Ok"
+msgstr "OK"
+
+msgid "VISIO_btn_Yes"
+msgstr "Oui"
+
+msgid "VISIO_dlg_AcceptIncomingCall?"
+msgstr "Accepter l'appel entrant ?"
+
+msgid "VISIO_dlg_CallWasEnded."
+msgstr "L'appel a été raccroché."
+
+msgid "VISIO_dlg_Cancel"
+msgstr "Fermer"
+
+msgid "VISIO_dlg_DoYouReallyWantToCloseVideoWindow?"
+msgstr "Voulez-vous vraiment fermer l'application télé-consultation ?"
+
+msgid "VISIO_dlg_ErrorInConnection."
+msgstr "L'appel a été interrompu."
+
+msgid "VISIO_dlg_MissingWebcam."
+msgstr "Le caméra ne semble pas être branché correctement."
+
+msgid "VISIO_dlg_SnapshotInProgress"
+msgstr "Prise de photo en cours..."
+
+msgid "VISIO_dlg_SnapshotTaken_ConsultPortal."
+msgstr ""
+"La photo est disponible sur le dossier du patient.\n"
+"Veuillez la consulter sur le portail."
+
+msgid "VISIO_hangup"
+msgstr "Raccrocher"

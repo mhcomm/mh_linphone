@@ -1,0 +1,245 @@
+/* Main window */
+
+/*
+ * ====================================================================================
+ * Warning: Adding a link to file in the pixmaps folder is not enough for the picture
+ *            to be seen in the GUI. You must also add the picture in the mh_pixmaps.qrc.
+ * ====================================================================================
+ */
+
+
+/******************General Push button cosmetics*********************/
+QPushButton {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+    /*text-align: left; */
+    text-decoration: none;
+    icon-size : 40px;
+
+    margin       : 0px ;
+    padding      : 0px ;
+    min-height   : 38px;   /* 38 + (28 * 2) = 94 pixels (real image height) */
+    max-height   : 38px;
+
+    border-width: 28px 28px 28px 28px ; /* top right bottom left */
+    border-image: url(":/pylib/lppixmaps/buttons/button_enabled.png") 28 28 28 28 stretch stretch;
+}
+
+QPushButton:disabled {
+    border-image: url(":/pylib/lppixmaps/buttons/button_disabled.png") 28 28 28 28 stretch stretch;
+    color: rgb(200,200,200);
+}
+
+QPushButton:pressed {
+    border-image: url(":/pylib/lppixmaps/buttons/button_pressed.png") 28 28 28 28 stretch stretch;
+    color: rgb(36,79,112);
+}
+
+
+QPushButton:checked {
+    border-image: url(":/pylib/lppixmaps/buttons/button_pressed.png") 28 28 28 28 stretch stretch;
+    color: rgb(36,79,112);
+}
+
+QPushButton:hover {
+    border-color: #aaaaaa;
+}
+
+MHPushButton {
+    max-width : 110px;
+/*  text-align: left;*/
+}
+
+QPushButton#btn_close {
+    margin       : 0px ;
+    padding      : 0px ;
+    border-width : 10px;
+    max-height   : 20px;
+}
+
+
+QPushButton#btn_validate_form {
+    margin       : 0px ;
+    padding      : 0px ;
+    border-width : 10px;
+    min-width    : 180px;
+    max-height   : 35px;
+    min-height   : 35px;
+    font-size    : 13px;
+}
+
+QPushButton#btn_call,
+QPushButton#btn_snapshot,
+QPushButton#btn_hangup,
+QPushButton#btn_profile1,
+QPushButton#btn_profile2,
+QPushButton#btn_profile3,
+QPushButton#btn_switch_camera {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    /*text-align: left; */
+    text-decoration: none;
+  
+    margin       : 0px ;
+    padding      : 0px ;
+    border-width : 12px ;
+    max-height   : 35px;
+    min-height   : 35px;
+    min-width    : 66px;
+    max-width    : 66px;
+}
+
+QPushButton#btn_hangup {
+    max-width : 66px;
+    border-image: url(":/pylib/lppixmaps/buttons/button_red.png") 28 28 28 28 stretch stretch;
+}
+
+QPushButton#btn_hangup:disabled
+{
+    border-image: url(":/pylib/lppixmaps/buttons/button_disabled.png") 28 28 28 28 stretch stretch;
+
+}
+
+/****************** Labels decoration******************/
+
+QLabel {
+    font: bold 20px;
+    color: rgb(36,79,112);
+}
+
+QLabel#video_widget {
+    background-color: black;
+    font: bold 30px;
+    color: white;
+} 
+
+/****************** Dialogs decoration******************/
+
+MHProgressDialog,
+QDialog {
+    font: bold 26px;
+    border-color: rgb(50, 60, 70);
+    border-width: 3px;
+    border-style:solid;
+    border-radius: 8px;
+    border-color: black; /* ????? */
+    padding: 6px;
+    background-color: rgb(200, 180, 180);
+}
+
+QDialog QLabel {
+    font: bold 26px;
+}
+
+MHProgressDialog,
+MHDialogCnf,
+MHDialogMsg {
+	min-height: 300;
+	min-width: 500;
+}
+
+/****************** Widgets/Frames decoration******************/
+
+QFrame#vline1,
+QFrame#vline2 {
+   max-height : 40px;
+   color: black;
+}
+
+QWidget#video_main_widget {
+    margin     : 0px ;
+    padding    : 0px ;
+    border     : 0px ;
+
+    background-image: url(":/pylib/lppixmaps/backgrounds/widget.png") ;
+}
+
+QFrame#snapshot_window {
+    max-width : 1280px;
+    max-height:  720px;
+}
+
+QFrame#navframe {
+    background-image:  url(":/pylib/lppixmaps/backgrounds/buttonbar.png") ;
+    min-height: 100px ;
+    max-height: 100px ;
+}
+
+QFrame#call_func_frame,
+QFrame#profile_frame {
+/*    min-width:  120px;
+    max-width:  120px;*/
+    border-width: 2px; 
+    border-radius: 8px;
+    border-style: outset;
+    border-color: black;
+    background-color: rgb(233, 241, 245);
+
+    border-image: url(":/pylib/lppixmaps/backgrounds/separation.png") 0 0 0 0 stretch stretch;
+}
+
+QWidget#rx_cam_win { 
+    background-color: rgb(233, 241, 245); /*rgb(255, 200, 100);*/
+    border-color: black; 
+    border-style: outset;  
+    border-width: 2px; 
+    border-radius: 8px;
+}
+
+QWidget#tx_widget { 
+    background-color: rgb(240, 180, 110); /*rgb(180, 230, 130); /*rgb(150, 200, 100);*/
+    border-color: black; /*rgb(150, 180, 200);*/ 
+    border-style: outset;  
+    border-width: 2px; 
+    border-radius: 8px;
+}
+
+/***************** Combobox style*****************/
+
+QComboBox {
+    color: white;
+    font: bold 14px;
+    min-height: 40px;
+    max-height: 40px;
+    /*min-width: 200px;*/
+    max-width: 600px;
+    margin       : 0px ;
+    padding      : 0px ;
+    border-width: 0px 6px 0px 6px ; /* top right bottom left */
+    border-image: url(":/pylib/lppixmaps/buttons/button_combobox.png")
+    
+}
+
+QComboBox QAbstractItemView{  
+    color: black;
+    font: bold 14px;
+    min-height : 40px;
+    max-height : 300px;
+    min-width : 100px;
+    max-width : 400px;
+}
+
+QComboBox#Annuary QAbstractItemView{  
+    color: black;
+    min-height : 50px;
+    max-height : 300px;
+    min-width : 100px;
+    max-width : 400px;
+}
+
+QComboBox::drop-down::down-arrow {
+    color: none;
+    subcontrol-origin: content;
+    subcontrol-position: center right;
+    image: url(":/pylib/lppixmaps/buttons/combo_down_arrow.png");
+}
+        
+/***************** General font style*****************/
+
+* {
+    font-family: "Arial";
+    font-size: large;
+}

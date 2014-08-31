@@ -1,0 +1,22 @@
+{
+ "type": "lp_addressbook", 
+ "version": "1.0", 
+ "data": {
+  "entries": [
+   {
+    "status": null, 
+    "id_": "01", 
+    "typ": "patient", 
+    "name": "contact1", 
+    "address": "sip:toto@1.2.3.4"
+   }, 
+   {
+    "status": null, 
+    "id_": "02", 
+    "typ": "medic", 
+    "name": "contact2", 
+    "address": "sip:tata@1.2.3.5"
+   }
+  ]
+ }
+}
